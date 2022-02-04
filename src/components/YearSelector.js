@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
 import { selectYear } from '../actions';
-import store from '../store.js';
 
-function MovieSelector(props) {
+function YearSelector(props) {
 
-  const onYearSelect = async (event) => {
+  const onYearSelect = (event) => {
 
     props.selectYear(event.target.value)
 
@@ -17,6 +16,8 @@ function MovieSelector(props) {
         <input onChange={onYearSelect} name="year" component="input" type="number" min="1910" max="2022"/>
       </form>
 
+      <h1>{props.year}</h1>
+
     </div>
   );
 }
@@ -28,4 +29,4 @@ const mapStateToProps = state => {
 export default connect(
   mapStateToProps,
   { selectYear }
-)(MovieSelector);
+)(YearSelector);

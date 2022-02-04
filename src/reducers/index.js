@@ -8,6 +8,16 @@ const selectedYearReducer = (selectedYear = null, action) => {
   return selectedYear;
 };
 
+const selectedMoviesReducer = (selectedMovies = [], action) => {
+  if (action.type === 'MOVIES_SELECTED') {
+    return action.payload;
+  }
+
+  return selectedMovies;
+};
+
 export default combineReducers({
-  selectedYearReducer : selectedYearReducer,
+  year : selectedYearReducer,
+  movies : selectedMoviesReducer
+
 });

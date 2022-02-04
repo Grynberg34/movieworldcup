@@ -1,4 +1,6 @@
-import MovieSelector from './MovieSelector';
+import YearSelector from './YearSelector';
+import MoviesSelector from './MoviesSelector';
+import MoviesList from './MoviesList';
 
 function App() {
 
@@ -6,7 +8,9 @@ function App() {
   
   return (
     <div>
-      <MovieSelector></MovieSelector>
+      <YearSelector></YearSelector>
+      <MoviesSelector></MoviesSelector>
+      <MoviesList></MoviesList>
     </div>
   );
 }
